@@ -3,6 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="lib" path="C:/Users/Jacks/Downloads/craftbukkit-1.7.2-R0.1-20131205.204030-20.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Jacks/Downloads/AsciiStuff.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jacks/Desktop/lava furnace/plugins/acii.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,0 +1,6 @@
+name: Visual Death Msg
+version: 1.0
+description: Adds Visual Death Msg
+author: Welsar55, PolarCraft
+main: net.jc.mincraft.dm.Main
+database: false
