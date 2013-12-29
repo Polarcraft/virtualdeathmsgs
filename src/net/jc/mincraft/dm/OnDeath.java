@@ -5,6 +5,7 @@ import net.shotbow.asciistuff.AsciiStuff;
 import org.bukkit.Server;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Fireball;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,11 +21,14 @@ public class OnDeath implements Listener{
         this.plugin = plugin;
     }
     
-    public String l = "GREEN";
-    public String bl = "BLACK";
-    public String g = "DARK_GREEN";
-    public String gr = "GRAY";
-    public String w = "WHITE";
+    String l = "GREEN";
+  	String bl = "BLACK";
+  	String g = "DARK_GREEN";
+	String gr = "GRAY";
+	String w = "WHITE";
+	String dr = "DARK_RED";
+	String o = "YELLOW";
+	String y = "YELLOW";
 
     @EventHandler
     public void OnPlayerDeath(PlayerDeathEvent e)
@@ -85,11 +89,52 @@ public class OnDeath implements Listener{
             		 }
             		 else if(a.getShooter().getType().equals(EntityType.PLAYER))
             		 {
-            			 
+              		 	plugin.getPlayerFace(player, (Player) killer); 
             		 }
+        		 } 
+        		 else if(((EntityDamageByEntityEvent) player.getLastDamageCause()).getDamager().getType().equals(EntityType.BLAZE))
+        		 {
+        			 String blaze1 = as.skinLine(y, y, y, y, y, y, y, y);
+        			 String blaze2 = as.skinLine(y, y, y, y, y, y, y, y);
+        			 String blaze3 = as.skinLine(y, y, y, y, y, y, y, y);
+        			 String blaze4 = as.skinLine(y, w, bl, y, y, bl, w, y);
+        			 String blaze5 = as.skinLine(o, o, o, o, o, o, o, o);
+        			 String blaze6 = as.skinLine(o, o, o, o, o, o, o, w);
+        			 String blaze7 = as.skinLine(o, dr, dr, dr, dr, o, dr, dr);
+        		 	 String blaze8 = as.skinLine(dr, dr, dr, dr, dr, dr, dr, dr);
+        		 	 server.broadcastMessage(blaze1);
+        		 	 server.broadcastMessage(blaze2);
+        		 	 server.broadcastMessage(blaze3);
+        		 	 server.broadcastMessage(blaze4);
+        		 	 server.broadcastMessage(blaze5);
+	        		 server.broadcastMessage(blaze6);
+	        		 server.broadcastMessage(blaze7);
+	        		 server.broadcastMessage(blaze8);
+        		 }
+        		 else if(((EntityDamageByEntityEvent) player.getLastDamageCause()).getDamager().getType().equals(EntityType.FIREBALL))
+        		 {
+        			 Fireball fb = (Fireball) ((EntityDamageByEntityEvent) player.getLastDamageCause()).getDamager();
+        			 if(fb.getShooter().getType().equals(EntityType.BLAZE))
+        			 {
+        				 String blaze1 = as.skinLine(y, y, y, y, y, y, y, y);
+        				 String blaze2 = as.skinLine(y, y, y, y, y, y, y, y);
+            		 	String blaze3 = as.skinLine(y, y, y, y, y, y, y, y);
+            		 	String blaze4 = as.skinLine(y, w, bl, y, y, bl, w, y);
+            		 	String blaze5 = as.skinLine(o, o, o, o, o, o, o, o);
+            		 	String blaze6 = as.skinLine(o, o, o, o, o, o, o, w);
+            		 	String blaze7 = as.skinLine(o, dr, dr, dr, dr, o, dr, dr);
+            		 	String blaze8 = as.skinLine(dr, dr, dr, dr, dr, dr, dr, dr);
+            		 	server.broadcastMessage(blaze1);
+            		 	server.broadcastMessage(blaze2);
+            		 	server.broadcastMessage(blaze3);
+            		 	server.broadcastMessage(blaze4);
+            		 	server.broadcastMessage(blaze5);
+            		 	server.broadcastMessage(blaze6);
+            		 	server.broadcastMessage(blaze7);
+            		 	server.broadcastMessage(blaze8);
+        			 }
         		 }
         	 }
     	 }
     }
-    
 }
