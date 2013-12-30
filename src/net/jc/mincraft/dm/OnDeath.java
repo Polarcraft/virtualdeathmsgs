@@ -44,7 +44,7 @@ public class OnDeath implements Listener{
         	 {
         		 if(((EntityDamageByEntityEvent) player.getLastDamageCause()).getDamager().getType().equals(EntityType.ZOMBIE))
         		 {
-         		 	plugin.getPlayerFace(player, (Player) killer); 
+         		 	PlayerHead.getPlayerFace(player, (Player) killer); 
         		 }
         		 else if(((EntityDamageByEntityEvent) player.getLastDamageCause()).getDamager().getType().equals(EntityType.ZOMBIE))
         		 {
@@ -89,7 +89,7 @@ public class OnDeath implements Listener{
             		 }
             		 else if(a.getShooter().getType().equals(EntityType.PLAYER))
             		 {
-              		 	plugin.getPlayerFace(player, (Player) killer); 
+              		 	PlayerHead.getPlayerFace(player, (Player) killer); 
             		 }
         		 } 
         		 else if(((EntityDamageByEntityEvent) player.getLastDamageCause()).getDamager().getType().equals(EntityType.BLAZE))

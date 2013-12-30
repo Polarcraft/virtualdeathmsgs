@@ -4,25 +4,21 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
-import java.util.logging.Logger;
 
 import javax.imageio.ImageIO;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.PluginDescriptionFile;
-import org.bukkit.plugin.PluginManager;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class PlayerHead extends JavaPlugin{
+public class PlayerHead{
         
         // got all this from the api but i need to change the get player face
         
-        public String codeU2592(ChatColor colour){
+        public static String codeU2592(ChatColor colour){
                 return colour + "\u2592";
         }
         
-        public void getPlayerFace(Player p, Player k){
+        public static void getPlayerFace(Player p, Player k){
                 String name = p.getName();
                 BufferedImage PlayerFace = null;
                 boolean cont = true;
@@ -82,7 +78,7 @@ public class PlayerHead extends JavaPlugin{
         }
         
         @SuppressWarnings("static-access")
-        private ChatColor getChatColorFromColor(Color c){
+        private static ChatColor getChatColorFromColor(Color c){
                 ChatColor ret = ChatColor.WHITE;
 
                 Integer r = c.getRed(); // RED

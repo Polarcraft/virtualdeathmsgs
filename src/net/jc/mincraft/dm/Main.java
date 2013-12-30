@@ -1,5 +1,7 @@
 package net.jc.mincraft.dm;
 
+import java.util.logging.Logger;
+
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
