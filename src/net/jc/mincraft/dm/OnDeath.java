@@ -111,6 +111,10 @@ public class OnDeath implements Listener{
 	        		 server.broadcastMessage(blaze7);
 	        		 server.broadcastMessage(blaze8);
         		 }
+        		 //else if(((EntityDamgeByEntityEvent) player.getLastDamageCause()).getDamager().getType().equals(EntityType.ENDERMAN))
+        		 //{
+        		 	
+        		 //}
         		 else if(((EntityDamageByEntityEvent) player.getLastDamageCause()).getDamager().getType().equals(EntityType.FIREBALL))
         		 {
         			 Fireball fb = (Fireball) ((EntityDamageByEntityEvent) player.getLastDamageCause()).getDamager();
